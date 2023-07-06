@@ -4,9 +4,6 @@ import Searchbar from '../components/Searchbar/Searchbar';
 import ImageGallery from '../components/ImageGallery/ImageGallery';
 import Button from '../components/Button/Button';
 import Modal from '../components/Modal/Modal';
-// import Loader from 'react-loader-spinner';
-
-// import 'react-loader-spinner/dist/loader/BallTriangle';
 import './styles.css';
 
 const App = () => {
@@ -42,7 +39,6 @@ const App = () => {
 
   const handleFormSubmit = query => {
     setSearchQuery(query);
-    setImages([]);
     setCurrentPage(1);
   };
 
@@ -65,7 +61,6 @@ const App = () => {
       {isLoading ? (
         <div className="Loader">
           Loading...
-          {/* <Loader type="BallTriangle" color="#3f51b5" height={80} width={80} /> */}
         </div>
       ) : null}
       {selectedImage && <Modal imageUrl={selectedImage} onClose={handleModalClose} />}
